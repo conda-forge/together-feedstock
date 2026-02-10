@@ -20,7 +20,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - poetry
+    - hatchling
   run:
     - python >=${{ python_min }}
     - typer >=0.9,<0.16
