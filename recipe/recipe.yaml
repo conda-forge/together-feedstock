@@ -21,6 +21,7 @@ requirements:
     - python ${{ python_min }}.*
     - pip
     - hatchling
+    - hatch-fancy-pypi-readme
   run:
     - python >=${{ python_min }}
     - typer >=0.9,<0.16
@@ -51,8 +52,8 @@ about:
   license: Apache-2.0
   license_file: LICENSE
   summary: The Official Python Client for Together's API
-  homepage: https://github.com/togethercomputer/together-python
-  repository: https://github.com/togethercomputer/together-python
+  homepage: https://github.com/togethercomputer/together-py
+  repository: https://github.com/togethercomputer/together-py
 
 extra:
   recipe-maintainers:
