@@ -1,6 +1,6 @@
 context:
   name: together
-  version: "1.5.35"
+  version: "2.1.0"
   python_min: "3.10"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: db3fc7dbc04dca044f437cd28224432e17567e6650dc1afd09780b48c0187cff
+  sha256: a368dad7570f0df9c0470551d4413a4990a56a1f3ad3a427afc5459362985f52
 
 build:
   number: 0
@@ -20,25 +20,31 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - poetry
+    - hatchling
+    - hatch-fancy-pypi-readme
   run:
     - python >=${{ python_min }}
-    - typer >=0.9,<0.16
-    - requests >=2.31.0,<3.0.0
-    - rich >=13.8.1,<15.0.0
-    - tqdm >=4.66.2,<5.0.0
-    - tabulate >=0.9.0,<1.0.0
-    - pydantic >=2.6.3,<3.0.0
-    - aiohttp >=3.9.3,<4.0.0
-    - filelock >=3.13.1,<4.0.0
-    - eval-type-backport >=0.1.3,<0.3.0
-    - click >=8.1.7,<9.0.0
-    - pillow >=11.1.0,<12.0.0
-    - numpy >=1.23.5
-    - black >=25.9.0,<26
+    - httpx >=0.23.0,<1
+    - pydantic >=1.9.0,<3
+    - typing-extensions >=4.10,<5
+    - anyio >=3.5.0,<5
+    - distro >=1.7.0,<2
+    - sniffio
+    - click >=8.1.7
+    - rich >=13.7.1
+    - tabulate >=0.9.0
+    - pillow >=10.4.0
+    - types-tabulate >=0.9.0.20240106
+    - tqdm >=4.67.1
+    - types-tqdm >=4.67.0.20250516
+    - filelock >=3.13.1
+    - types-pyyaml >=6.0.12.20250915
+    - tomli >=2.0.0
 
   run_constraints:
-    - pyarrow >=10.0.1
+    - httpx-aiohttp >=0.1.9
+    - aiofiles >=25.0.0
+    - pyarrow >=16.1.0
 
 tests:
   - python:
@@ -51,8 +57,8 @@ about:
   license: Apache-2.0
   license_file: LICENSE
   summary: The Official Python Client for Together's API
-  homepage: https://github.com/togethercomputer/together-python
-  repository: https://github.com/togethercomputer/together-python
+  homepage: https://github.com/togethercomputer/together-py
+  repository: https://github.com/togethercomputer/together-py
 
 extra:
   recipe-maintainers:
