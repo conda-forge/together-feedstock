@@ -3,13 +3,13 @@ About together-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/together-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/togethercomputer/together-python
+Home: https://github.com/togethercomputer/together-py
 
 Package license: Apache-2.0
 
 Summary: The Official Python Client for Together's API
 
-Development: https://github.com/togethercomputer/together-python
+Development: https://github.com/togethercomputer/together-py
 
 Current build status
 ====================
