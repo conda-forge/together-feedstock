@@ -1,6 +1,6 @@
 context:
   name: together
-  version: "2.30.0"
+  version: "2.31.0"
   python_min: "3.10"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 5fb5655244affef2af5734601cb59805b790ba018c8b9c4c649b83429edcd25e
+  sha256: e9c941caf055eb1a97fc560819a19fbb95d626722b712a4ec7cc1ea2bb0ecd27
 
 build:
   number: 0
@@ -52,7 +52,9 @@ tests:
       imports:
         - together
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: Apache-2.0
