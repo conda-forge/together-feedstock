@@ -1,7 +1,6 @@
 context:
   name: together
   version: "2.36.0"
-  python_min: "3.10"
 
 package:
   name: ${{ name|lower }}
