@@ -25,21 +25,16 @@ requirements:
     - python >=${{ python_min }}
     - httpx >=0.23.0,<1
     - pydantic >=1.9.0,<3
-    - typing-extensions >=4.10,<5
+    - typing-extensions >=4.14,<5
     - anyio >=3.5.0,<5
     - distro >=1.7.0,<2
     - sniffio
-    - cyclopts >=4.6.0
-    - rich >=13.7.1
-    - tabulate >=0.9.0
-    - pillow >=10.4.0
-    - types-tabulate >=0.9.0.20240106
-    - tqdm >=4.67.1
-    - types-tqdm >=4.67.0.20250516
-    - filelock >=3.13.1
+    - cyclopts >=4.6.0,<5
+    - rich >=14.2.0,<15
+    - filelock >=3.13.1,<4
     - types-pyyaml >=6.0.12.20250915
-    - tomli >=2.0.0
-    - detect-agent >=0.2.0
+    - tomli >=2.0.0,<3
+    - detect-agent >=0.6.0,<1
 
   run_constraints:
     - httpx-aiohttp >=0.1.9
