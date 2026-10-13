@@ -1,6 +1,6 @@
 context:
   name: together
-  version: "2.40.0"
+  version: "2.41.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: d22ffebcd0595a077fe5431d1a14bc601c9677cf6c7efa245cbc62e2f16ed4bd
+  sha256: 075d66df09ccf77939da5bd3c3ec6e14b8ce813ee7f4c32b980beb010a554229
 
 build:
   number: 0
