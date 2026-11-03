@@ -13,13 +13,17 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install . -vv
+  script: python -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - together = together.lib.cli:main
+      - tg = together.lib.cli:main
 
 requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - hatchling
+    - hatchling ==1.26.3
     - hatch-fancy-pypi-readme
   run:
     - python >=${{ python_min }}
@@ -33,7 +37,6 @@ requirements:
     - rich >=14.2.0,<15
     - filelock >=3.13.1,<4
     - types-pyyaml >=6.0.12.20250915
-    - tomli >=2.0.0,<3
     - detect-agent >=0.6.0,<1
 
   run_constraints:
@@ -49,6 +52,12 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - "*"
+  - script:
+      env:
+        TOGETHER_TELEMETRY_DISABLED: "1"
+      content:
+        - together --help
+        - tg --help
 
 about:
   license: Apache-2.0
